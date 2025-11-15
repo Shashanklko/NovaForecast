@@ -1,0 +1,23 @@
+@import './styles/variables.css';
+@import './styles/animations.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Remove Semantic UI import - we're using custom styles now */
+/* @import url('https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css'); */
