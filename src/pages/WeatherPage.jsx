@@ -3,16 +3,19 @@ import { useWeather } from '../hooks/useWeather';
 import { useGeolocation } from '../hooks/useGeolocation';
 import { getFromLocalStorage, saveToLocalStorage } from '../utils/weatherUtils';
 import { TimeProvider } from '../contexts/TimeContext';
-import WeatherSummary from '../components/WeatherSummary/WeatherSummary.jsx';
-import WeatherCard from '../components/WeatherCard/WeatherCard';
-import HourlyForecast from '../components/HourlyForecast/HourlyForecast';
-import SearchBar from '../components/SearchBar/SearchBar';
-import WeatherDetails from '../components/WeatherDetails/WeatherDetails';
-import LoadingSkeleton from '../components/LoadingSkeleton/LoadingSkeleton';
-import Clock from '../components/Clock/Clock';
-import ToggleSwitch from '../components/ToggleSwitch/ToggleSwitch';
-import Background from '../components/Background/Background';
-import ExtensionInstall from '../components/ExtensionInstall/ExtensionInstall.jsx';
+
+// Components (add .jsx explicitly)
+import WeatherSummary from '../Components/WeatherSummary/WeatherSummary.jsx';
+import WeatherCard from '../Components/WeatherCard/WeatherCard.jsx';
+import HourlyForecast from '../Components/HourlyForecast/HourlyForecast.jsx';
+import SearchBar from '../Components/SearchBar/SearchBar.jsx';
+import WeatherDetails from '../Components/WeatherDetails/WeatherDetails.jsx';
+import LoadingSkeleton from '../Components/LoadingSkeleton/LoadingSkeleton.jsx';
+import Clock from '../Components/Clock/Clock.jsx';
+import ToggleSwitch from '../Components/ToggleSwitch/ToggleSwitch.jsx';
+import Background from '../Components/Background/Background.jsx';
+import ExtensionInstall from '../Components/ExtensionInstall/ExtensionInstall.jsx';
+
 import './WeatherPage.css';
 
 const WeatherPage = () => {
@@ -278,5 +281,7 @@ const WeatherPage = () => {
     </TimeProvider>
   );
 };
+
+
 
 export default WeatherPage;
