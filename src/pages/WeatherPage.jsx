@@ -3,7 +3,7 @@ import { useWeather } from '../hooks/useWeather';
 import { useGeolocation } from '../hooks/useGeolocation';
 import { getFromLocalStorage, saveToLocalStorage } from '../utils/weatherUtils';
 import { TimeProvider } from '../contexts/TimeContext';
-import WeatherSummary from '../components/WeatherSummary/WeatherSummary';
+import WeatherSummary from '../components/WeatherSummary/WeatherSummary.jsx';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import HourlyForecast from '../components/HourlyForecast/HourlyForecast';
 import SearchBar from '../components/SearchBar/SearchBar';
@@ -12,7 +12,7 @@ import LoadingSkeleton from '../components/LoadingSkeleton/LoadingSkeleton';
 import Clock from '../components/Clock/Clock';
 import ToggleSwitch from '../components/ToggleSwitch/ToggleSwitch';
 import Background from '../components/Background/Background';
-import ExtensionInstall from '../components/ExtensionInstall/ExtensionInstall';
+import ExtensionInstall from '../components/ExtensionInstall';
 import './WeatherPage.css';
 
 const WeatherPage = () => {
