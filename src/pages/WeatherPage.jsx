@@ -12,7 +12,7 @@ import LoadingSkeleton from '../components/LoadingSkeleton/LoadingSkeleton';
 import Clock from '../components/Clock/Clock';
 import ToggleSwitch from '../components/ToggleSwitch/ToggleSwitch';
 import Background from '../components/Background/Background';
-import ExtensionInstall from '../components/ExtensionInstall';
+import ExtensionInstall from '../components/ExtensionInstall/ExtensionInstall.jsx';
 import './WeatherPage.css';
 
 const WeatherPage = () => {
