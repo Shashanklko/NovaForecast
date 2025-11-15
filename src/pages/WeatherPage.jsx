@@ -19,7 +19,7 @@ import ExtensionInstall from '../Components/ExtensionInstall/ExtensionInstall.js
 import './WeatherPage.css';
 
 const WeatherPage = () => {
-  const { coords: geoCoords } = useGeolocation();
+  const { coords: geoCoords, error: geoError, loading: geoLoading, permissionDenied } = useGeolocation();
   const { weather, loading, error, location, fetchWeatherByCity, fetchWeatherByCoords, refetch } = useWeather();
   const [isCelsius, setIsCelsius] = useState(getFromLocalStorage('isCelsius', true));
   const [is12Hour, setIs12Hour] = useState(getFromLocalStorage('is12Hour', true));
@@ -173,7 +173,57 @@ const WeatherPage = () => {
   const weatherCode = processedData?.currentWeather?.WeatherCode;
   const isDay = processedData?.isDay;
 
-  if (loading && !weather) {
+  // Show location permission message if denied and no weather data
+  // Check !geoLoading to ensure geolocation has finished checking
+  if (permissionDenied && !weather && !geoLoading) {
+    return (
+      <Background weatherCode={weatherCode} isDay={isDay}>
+        <div className="weather-container">
+          <header className="app-header">
+            <div className="app-logo-container" onClick={handleReload}>
+              <img src="/favicon.png" alt="Nova Forecast" className="app-logo" />
+              <h1 className="app-title">Nova Forecast</h1>
+            </div>
+            <ExtensionInstall />
+          </header>
+          
+          <div className="location-permission-message">
+            <div className="permission-card">
+              <div className="permission-icon">📍</div>
+              <h2>Location Access Needed</h2>
+              <p>To show weather for your current location, please allow location access.</p>
+              
+              <div className="permission-actions">
+                <button 
+                  className="btn-primary" 
+                  onClick={() => window.location.reload()}
+                >
+                  Enable Location & Reload
+                </button>
+                <p className="or-divider">or</p>
+                <p className="search-prompt">Search for a city below to get started</p>
+              </div>
+            </div>
+            
+            <SearchBar onSearch={handleSearch} />
+            
+            <div className="permission-instructions">
+              <details>
+                <summary>How to enable location permission</summary>
+                <ul>
+                  <li><strong>Chrome/Edge:</strong> Click the lock icon in address bar → Site settings → Location → Allow</li>
+                  <li><strong>Firefox:</strong> Click the shield icon → Permissions → Location → Allow</li>
+                  <li><strong>Safari:</strong> Safari → Settings → Websites → Location → Allow</li>
+                </ul>
+              </details>
+            </div>
+          </div>
+        </div>
+      </Background>
+    );
+  }
+
+  if (loading && !weather && !permissionDenied) {
     return (
       <Background weatherCode={weatherCode} isDay={isDay}>
         <div className="weather-container">
