@@ -191,14 +191,14 @@ const WeatherPage = () => {
             <div className="permission-card">
               <div className="permission-icon">📍</div>
               <h2>Location Access Needed</h2>
-              <p>To show weather for your current location, please allow location access.</p>
-              
+              <p>To show weather for your current location, please turn on your location services from browser settings and click on Reload.</p>
+              <p>If you are using a mobile device, please turn on your location services from device settings and click on Reload.</p>
               <div className="permission-actions">
                 <button 
                   className="btn-primary" 
                   onClick={() => window.location.reload()}
                 >
-                  Enable Location & Reload
+                  Reload
                 </button>
                 <p className="or-divider">or</p>
                 <p className="search-prompt">Search for a city below to get started</p>
