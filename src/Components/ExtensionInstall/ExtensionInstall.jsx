@@ -7,7 +7,7 @@ const ExtensionInstall = () => {
   
   // GitHub repository URL - Update this with your actual GitHub repository URL
  const GITHUB_REPO_URL = 'https://github.com/Shashanklko/NovaForecast';
-const GITHUB_EXTENSION_URL = 'https://github.com/Shashanklko/NovaForecast/tree/main/extension';
+const GITHUB_EXTENSION_URL = 'https://github.com/Shashanklko/NovaForecast-Extension';
 const GITHUB_DOWNLOAD_URL = 'https://github.com/Shashanklko/NovaForecast-Extension/archive/refs/heads/main.zip';
 
   useEffect(() => {
