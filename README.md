@@ -72,11 +72,9 @@ A beautiful, modern React weather application with a browser extension that disp
 ## 🖼️ Demo
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Shashanklko/NovaForecast/main/public/demo1.png" width="70%" alt="NovaForecast Web App Demo">
+  <img src="public/image.png" width="70%" alt="NovaForecast Web App Demo">
 </p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Shashanklko/NovaForecast/main/public/demo-extension.png" width="40%" alt="NovaForecast Browser Extension">
-</p>
+
 <!-- Add actual screenshots (demo1.png, demo-extension.png) in /public for proper display -->
 
 ---
