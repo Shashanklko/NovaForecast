@@ -9,7 +9,7 @@ A beautiful, modern React weather application with a browser extension that disp
 ## 📋 Table of Contents
 
 - [Features](#-features)
-- [Screenshots](#-screenshots)
+
 - [Getting Started](#-getting-started)
   - [Web Application](#web-application)
   - [Browser Extension](#browser-extension)
